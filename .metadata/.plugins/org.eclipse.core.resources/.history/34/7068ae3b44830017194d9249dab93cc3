@@ -1,0 +1,9 @@
+package com.demo.pageObject;
+
+public class PageObject {
+
+	public PageObject() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

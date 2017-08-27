@@ -1,0 +1,17 @@
+package domain.bdd.test;
+
+
+import org.junit.runner.RunWith;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+@Cucumber.Options(plugin= {“pretty”, “html:target/cucumber-htmlreport”,”json-pretty:target/cucumber-report.json”})
+
+@CucumberOptions(
+		features = "Feature"
+		,glue={"domain.bdd.stepdefinitions"}
+		)
+public class TestRunner {
+
+}

@@ -1,0 +1,35 @@
+1502617820172	Rename package 'domain.bdd'
+1502617878223	Copy package
+1502617927174	Copy package
+1502617940925	Copy package
+1502617953482	Delete element
+1502617978125	Copy package
+1502618021241	Copy package
+1502618035969	Copy package
+1502618095300	Copy package
+1502618116600	Delete element
+1502618403261	Copy package
+1502618416124	Rename package 'domain.bdd.driver.feautures'
+1502618568596	Copy package
+1502618581451	Copy compilation unit
+1502618587767	Delete element
+1502618634514	Rename type 'Test_Steps'
+1502618779126	Delete element
+1502618791811	Delete element
+1502618915927	Delete element
+1502619287594	Rename package 'domain.bdd.pageobject'
+1502619296646	Delete element
+1502619337954	Copy package
+1502619351070	Copy compilation unit
+1502619363569	Rename type 'Login_Steps'
+1502619597842	Rename package 'domain.bdd.pageObject.logIn'
+1502619689061	Delete element
+1502623672152	Delete element
+1502966795310	Rename package 'domain.bdd.constant'
+1502966809602	Rename package 'domain.bdd.data'
+1502966823360	Rename package 'domain.bdd.driver'
+1502966841043	Rename package 'domain.bdd.pageObject'
+1502966853287	Rename package 'domain.bdd.properties'
+1502966863767	Rename package 'domain.bdd.stepdefinitions'
+1502966874024	Rename package 'domain.bdd.test'
+1502966887243	Rename package 'domain.bdd.util'

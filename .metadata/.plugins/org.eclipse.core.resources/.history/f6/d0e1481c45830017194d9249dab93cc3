@@ -1,0 +1,69 @@
+package com.demo.pageObject;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
+
+import cucumber.api.DataTable;
+
+public class Login extends PageObject{
+	
+	//public static WebDriver driver;
+	@FindBy(id = "log")
+	  WebElement username;
+	
+	@FindBy(id = "pwd")
+	   WebElement passWord;
+	
+	@FindBy(id = "login")
+	   WebElement login;
+	
+	@FindBy(xpath = ".//*[@id='account']/a")
+	   WebElement loginpage;
+	
+	@FindBy(xpath = ".//*[@id='account_logout']/a")
+	   WebElement logout;
+	
+	public Login(WebDriver driver) {
+        super(driver);
+    }
+	
+	public static void user_is_on_Home_Page() throws Throwable {
+		
+		}
+
+	public  void user_Navigate_to_LogIn_Page() throws Throwable {
+		loginpage.click();
+		}
+
+	public  void user_enters_UserName_and_Password(DataTable usercredentials) throws Throwable {
+		List<List<String>> data = usercredentials.raw();
+		driver.findElement(By.id("log")).sendKeys(data.get(0).get(0)); 
+	    driver.findElement(By.id("pwd")).sendKeys(data.get(0).get(1));
+		driver.findElement(By.id("login")).click();
+		}
+
+	public  void message_displayed_Login_Successfully() throws Throwable {
+		//System.out.println(driver.findElement(By.id("//*[@id=\"post-31\"]/header/h1")).getText());
+		System.out.println("Login Successfully");
+	}
+
+	public  void user_LogOut_from_the_Application() throws Throwable {
+		driver.findElement (By.xpath(".//*[@id='account_logout']/a")).click();
+	}
+
+	public  void message_displayed_Logout_Successfully() throws Throwable {
+        System.out.println("LogOut Successfully");
+	}
+
+	public  void closeTheBrowser() throws Throwable {
+		driver.close();
+		
+	}
+
+}

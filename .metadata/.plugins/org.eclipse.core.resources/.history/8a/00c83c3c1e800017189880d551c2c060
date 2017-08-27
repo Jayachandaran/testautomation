@@ -1,0 +1,42 @@
+package domain.bdd.stepdefinitions;
+
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import domain.bdd.pageObject.Login;
+
+public class Login_Steps {
+	
+	 @Given("^User is on Home Page$")
+	    public void user_is_on_home_page() throws Throwable {
+		 Login.user_is_on_Home_Page();
+	    }
+
+	    @When("^User Navigate to LogIn Page$")
+	    public void user_navigate_to_login_page() throws Throwable {
+	    	Login.user_Navigate_to_LogIn_Page();
+	    }
+
+	    @When("^User LogOut from the Application$")
+	    public void user_logout_from_the_application() throws Throwable {
+	    	Login.user_LogOut_from_the_Application();
+	    }
+
+	    @Then("^Message displayed Login Successfully$")
+	    public void message_displayed_login_successfully() throws Throwable {
+	    	Login.message_displayed_Login_Successfully();
+	    }
+
+	   
+	    @And("^User enters \"(.*?)\" and \"(.*?)\"$")
+		public void userEntersAnd(String arg1, String arg2) throws Throwable {
+			Login.user_enters_UserName_and_Password();
+		}
+
+		@Then("^Message displayed LogOut Successfully$")
+		public void messageDisplayedLogOutSuccessfully() throws Throwable {
+			Login.message_displayed_Logout_Successfully();
+		}
+	
+}
